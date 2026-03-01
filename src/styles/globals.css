@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+    --bg: 11 15 25; /* #0B0F19 */
+    --panel: 17 24 39; /* #111827 */
+    --text: 255 255 255; /* white */
+    --muted: 148 163 184; /* slate-400 */
+    --border: 51 65 85; /* slate-700 */
+    --accent: 99 102 241; /* indigo-500 */
+    --accent2: 56 189 248; /* sky-400 */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(var(--bg));
+    color: rgb(var(--text));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus: чтобы было красиво и доступно с клавиатуры */
+:focus-visible {
+    outline: 2px solid rgb(var(--accent2) / 0.6);
+    outline-offset: 2px;
+}
+
+/* Подсветка выделения текста */
+::selection {
+    background: rgb(var(--accent) / 0.35);
+}
